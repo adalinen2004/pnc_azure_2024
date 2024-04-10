@@ -1,0 +1,405 @@
+@charset "UTF-8";
+
+/*
+background #7EA1C4 
+text - #1B365C 
+heading - #040C17
+*/
+
+/*hero image/header*/
+.hero_image {
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/coffee_beans.jpg);
+    height:500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero_header {
+    text-align: left;
+    position: absolute;
+    color: white;
+    top: 40%;
+    text-shadow: .05em .05em .1em black;
+    font-size: 3em;
+    margin: 20px;
+}
+
+/*img styles*/
+img {
+    max-width: 100%;
+}
+
+/*General Style*/
+html {
+    box-sizing: border-box;
+}
+  *  {
+        box-sizing:border-box;
+    }
+
+body {
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: #1B365C;
+    background-color: #7EA1C4;
+    max-width: 1200px;
+}
+
+h2 {
+    font: bold 1.2em Times,serif;
+    text-transform: uppercase;
+    color: #040C17;
+    letter-spacing: .4em;
+}
+
+ul {
+    font-weight: bold;
+    color: #1B365C;
+    display: inline-block;
+    padding-left: 0;
+    text-align: left;
+}
+
+h1 {
+    font: bold 2.2em Times,serif;
+    color: #1B365C;
+    text-shadow: .05em .05em .1em gray;
+}
+
+
+img {
+    max-width: 100%;
+}
+/*nav styles*/
+.main_nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    background-color: #0A1F46;
+    padding: .3em;
+    margin: 0;
+}
+
+.main_nav a {
+    color: white;
+    padding: 60px 40px;
+    text-decoration: none;
+    display:inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main_nav a:hover {
+    background-color: #7EA1C4;
+    color: azure;
+}
+/*INDEX PAGE GRID*/
+#index_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: 
+        'welcome        welcome         welcome'
+        'fact1          fact2           fact3'
+        'about          about           about'
+        'review         review          review'
+        'drinks         pastries        healthy'
+        'footer         footer          footer'
+    ;
+    background-color: white;
+    margin: 0 auto;
+}
+
+
+#about {
+    grid-area: about;
+    object-fit: cover;
+    text-align:center;
+}
+
+#fact3 {
+    grid-area: fact3;
+    object-fit: cover;
+    text-align: center;
+}
+
+#fact2 {
+    grid-area: fact2;
+    object-fit: cover;
+    text-align: center;
+}
+
+#fact1 {
+    grid-area: fact1;
+    object-fit: cover;
+    text-align: center;
+}
+
+#welcome {
+    grid-area: welcome;
+    object-fit: cover;
+    text-align: center;
+}
+
+
+#drinks_index {
+    grid-area: drinks;
+    background-color: rgba(93,89,100,.3);
+    border: solid;
+    grid-area: drinks;
+    object-fit: cover;
+    text-align: center;
+    padding: 50px;
+    margin: 20px;
+}
+
+#pastries_index {
+    grid-area: pastries;
+    background-color: rgba(93,89,100,.3);
+    border: solid;
+    grid-area: pastries;
+    object-fit: cover;
+    text-align: center;
+    padding: 50px;
+    margin: 20px;
+}
+
+#healthy_index {
+    grid-area: healthy;
+    background-color: rgba(93,89,100,.3);
+    border: solid;
+    grid-area: healthy;
+    object-fit: cover;
+    text-align: center;
+    padding: 50px;
+    margin: 20px;
+}
+
+#reviews {
+    grid-area: review;
+    object-fit: cover;
+    text-align: center;
+
+
+}
+
+#footer {
+    grid-area: footer;
+    font-weight: bold; 
+    color: black;
+    background-color: white;
+    text-align: center;
+}
+
+/*responsive gallery*/
+
+.drinks {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-template-rows: 1fr;
+    grid-gap: 15px;
+}
+
+.pastries {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-template-rows: 1fr;
+    grid-gap: 15px;
+}
+
+.healthy {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-template-rows: 1fr;
+    grid-gap: 15px;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+#drinks, #pastries, #healthy {
+    margin: 50px;
+}
+
+/*container style*/
+#welcome {
+    margin: 0px 300px 0px 300px;
+    padding: 60px 0px 60px 0px;
+}
+
+#fact1, #fact2, #fact3 {
+    margin: 20px;
+}
+
+
+.header {
+    font: bold 1.2em Times, serif;
+    text-transform: uppercase;
+    color: #040C17;
+    letter-spacing: .4em;
+}
+
+/*   MEDIA QUERY  */
+@media screen and (max-width: 1800px) {
+    #index_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: 
+            'welcome        welcome         welcome'
+            'fact1          fact2           fact3'
+            'about          about           about'
+            'review         review          review'
+            'drinks         pastries        healthy'
+            'footer         footer          footer'
+        ;
+        background-color: white;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    #index_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas:
+            'welcome        welcome'
+            'fact1          fact1'
+            'fact2          fact3'   
+            'about          about'
+            'review         review'
+            'drinks         drinks'
+            'pastries       healthy'
+            'footer         footer'
+        ;
+        justify-items: center;
+        background-color: white;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+    #drinks_index {
+        grid-area: drinks;
+        object-fit: cover;
+        text-align: center;
+        padding-left: 300px;
+        padding-right: 300px;
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #index_grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+            'welcome'       
+            'fact1'         
+            'fact2'
+            'fact3'           
+            'about'
+            'review'
+            'drinks'
+            'pastries'       
+            'healthy'
+            'footer'
+        ;
+        background-color: #7EA1C4;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    #drinks_index {
+        grid-area: drinks;
+        object-fit: cover;
+        text-align: center;
+        padding-left: 300px;
+        padding-right: 300px;
+        margin-left: 10%;
+        margin-right: 50%;
+    }
+    
+    #pastries_index {
+        grid-area: pastries;
+        object-fit: cover;
+        text-align: center;
+        padding-left: 300px;
+        padding-right: 300px;
+        margin-left: 10%;
+        margin-right: 50%;
+    }
+    
+    #healthy_index {
+        grid-area: healthy;
+        object-fit: cover;
+        text-align: center;
+        padding-left: 300px;
+        padding-right: 300px;
+        margin-left: 10%;
+        margin-right: 50%;
+    }
+
+    #footer {
+        grid-area: footer;
+        background-color: #7EA1C4;margin-left: 10%;
+        margin-right: 50%;
+    }
+
+    body {
+        font-size: 16px;
+        font-weight: bolder;
+    }
+
+    .main_nav {
+        padding: .3em;
+        font-size: 13px;
+    }
+
+    #welcome {
+        grid-area: welcome;
+        margin-right: 80%;
+    }
+    
+    #fact3 {
+        grid-area: fact3;
+        margin-left: 10%;
+        margin-right: 50%;
+    }
+    
+    #fact2 {
+        grid-area: fact2;
+        margin-left: 10%;
+        margin-right: 50%;
+    }
+    
+    #fact1 {
+        grid-area: fact1;
+        margin-left: 10%;
+        margin-right: 50%;
+    }
+    #about {
+        grid-area: about;
+        margin-left: 10%;
+        margin-right: 50%;
+    }
+
+    #reviews {
+        grid-area: review;
+        margin-left: 10%;
+        margin-right: 50%;
+    }
+    
+
+
+}
+
+/*
+    */
+
